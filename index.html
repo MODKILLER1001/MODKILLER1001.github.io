@@ -8,35 +8,52 @@
 <body>
   
 
-<center class="unicorn" style="font-size:400%;">am cookie and am ron okay?</center>
+<style>
+  
+center{
+  color:rgba(100, 50, 255, .8);
+  font-size: 500%;
+}
+.rainbow {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 1s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 1s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 1s infinite; 
+}
 
-<script>
-        var step = 4, // colorChage step, use negative value to change direction
-            ms   = 10,  // loop every
-            $uni = $('.unicorn'),
-            txt  = $uni.text(),
-            len  = txt.length,
-            lev  = 360/len,
-            newCont = "",
-            itv;
-        
-        for(var i=0; i<len; i++)newCont += "<span style='color:hsla("+ i*lev +", 100%, 50%, 1)'>"+ txt.charAt(i) +"</span>";
-        
-        $uni.html(newCont); // Replace with new content
-        var $ch = $uni.find('span'); // character
-        
-        function anim(){
-          itv = setInterval(function(){
-            $ch.each(function(){
-              var h = +$(this).attr('style').split(',')[0].split('(')[1]-step % 360;
-              $(this).attr({style:"color:hsla("+ h +", 100%, 50%, 1)"});
-            });
-          }, ms); 
-        }
-        anim();
-          
-        
-            </script>
-            <div style="height:10%; position:absolute; bottom:0px;"><a href="https://stackoverflow.com/questions/19165364/cycling-animation-of-rainbow-coloured-text">This helped me!</a></div>
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+
+  </style>
+
+<center class="rainbow"> Hi there, I'm Ron! </center>
+            <div style="height:10%; position:absolute; bottom:0px;"><a href="https://codepen.io/srm4nu/pen/OVXXmj">This helped me!</a></div>
         </body>
             </html>
