@@ -1,12 +1,14 @@
+.dankmeme{
+  color: #FF0000;
+  display: inline;
+}
 body{
   background-color: black;
 }
 
-center{
-color:rgba(100, 50, 255, .8);
-font-size: 500%;
-}
 .rainbow {
+  color:rgba(100, 50, 255, .8);
+  font-size: 500%;
  /* Chrome, Safari, Opera */
 -webkit-animation: rainbow 1s infinite; 
 
